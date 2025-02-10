@@ -1,0 +1,257 @@
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+  body{
+    background-image: url("Maris-BelgischPark.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+}
+</style>
+<div class="header">
+  <h3><P>‎</p>
+    Mediatheek</h3>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+    <a href="index.html">Home page</a>
+    <a href="Over ons.html">Over ons</a>
+    <a href="Openingstijden.html">Openingstijden</a>
+    <a href="Contact.html">Contact</a>
+    <a href="Veelgestelde vragen.html">Veelgestelde vragen</a>
+  </div>
+</div>
+</html>
+<title>Boeken Zoeken</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="search-input-wrapper">
+      <div class="search-input">
+        <input type="text" id="search" placeholder="Search" onkeyup="searchItems()">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <div class="search-icon">
+      <i class="fas fa-search"></i>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+<div id="add-item-form">
+  <h2>Voeg een nieuw item toe</h2>
+  <form id="item-form" onsubmit="addItem(event)">
+      <input type="text" id="item-name" placeholder="Naam van het boek" required>
+      <input type="text" id="item-type" placeholder="Type Boek" required>
+      <input type="text" id="Auteur" placeholder="De auteur" required>
+      <input type="text" id="item-description" placeholder="Beschrijving van het boek" required>
+      <button type="submit">Voeg Item Toe</button>
+  </form>
+</div>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.search-input-wrapper {
+  width: 100%;
+  height: 5rem;
+  background-color: rgba(255, 69, 69, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.search-input-wrapper.change {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s 1s;
+}
+
+.search-input {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-input input {
+  width: 27rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem solid #999;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+  outline: none;
+  color: #555;
+  margin-right: 1rem;
+}
+
+.search-input i {
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.7rem;
+  right: 3rem;
+  animation: searchIconAnim2 0.5s forwards;
+}
+
+.search-icon.change {
+  animation: searchIconAnim 1s forwards;
+}
+
+.search-icon i {
+  color: #999;
+  cursor: pointer;
+}
+
+@keyframes searchIconAnim {
+  0% {
+    top: 1.7rem;
+  }
+
+  40% {
+    top: 40%;
+    font-size: 25rem;
+  }
+
+  60% {
+    top: 40%;
+    right: calc(50% + 16rem);
+  }
+
+  100% {
+    top: 1.7rem;
+    right: calc(50% + 16rem);
+  }
+}
+
+@keyframes searchIconAnim2 {
+  0% {
+    right: calc(50% + 16rem);
+  }
+
+  100% {
+    right: 3rem;
+  }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu input {
+    padding: 8px;
+    margin-top: 10px;
+    width: 300px;
+    font-size: 14px;
+}
+
+.hero {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    color: #333;
+}
+
+#add-item-form {
+    text-align: center;
+    padding: 20px;
+}
+
+#add-item-form input {
+    margin: 10px;
+    padding: 8px;
+    width: 250px;
+}
+
+#add-item-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#add-item-form button:hover {
+    background-color: #555;
+}
+
+#items-list {
+    padding: 20px;
+    text-align: center;
+}
+
+.item {
+    list-style-type: none;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+#search {
+    padding: 8px;
+    margin-top: 10px;
+    width: 300px;
+    font-size: 14px;
+}
+</style>
+<div id="items-list">
+  <h2>Beschikbare Items</h2>
+  <ul id="item-list">
+      <!-- Dynamisch gegenereerde items worden hier weergegeven -->
+  </ul>
+</div>
+<img src="Geschiedenis-van-boeken-1024x683.webp" alt="Boeken" width="1490px" height="366px">
