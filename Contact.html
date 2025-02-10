@@ -1,0 +1,61 @@
+<link href="style2.css" rel="stylesheet" type="text/css"/>
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="header">
+  <h3>Mediatheek</h3>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+    <a href="index.html">Home page</a>
+    <a href="Over ons.html">Over ons</a>
+    <a href="Openingstijden.html">Openingstijden</a>
+    <a href="boeken.html">Boeken Zoeken</a>
+    <a href="Veelgestelde vragen.html">Veelgestelde vragen</a>
+  </div>
+</div>
+</html>
+<title>Contact</title>
+<style>
+  .centered {
+    text-align: center;
+  }
+  .container {
+    color: white;
+    text-align: center;
+  }
+</style>
+<span style="color: white;">
+<h1 class="centered">Contact Formulier</h1>
+<div class="container">
+  <form action="https://formsubmit.co/your@email.com" method="post">
+
+    <label for="fname"></label>
+    <input type="text" id="fname" name="firstname" placeholder="Voornaam" required>
+
+    <label for="lname"></label>
+    <input type="text" id="lname" name="lastname" placeholder="Achternaam" required>
+
+    <label for="email"></label>
+    <input type="text" id="email" name="email" placeholder="Email" required>
+
+    <label for="onderwerp"></label>
+    <input type="text" id="onderwerp" name="onderwerp" placeholder="Onderwerp" required>
+
+    <label for="country"></label>
+    <select id="country" name="country">
+      <option value="leerling">Leerling</option>
+      <option value="docent">Docent</option>
+    </select>
+
+    <label for="subject"></label>
+    <textarea id="subject" name="subject" placeholder="Schrijf je bericht" style="height:200px" required></textarea>
+<center></center>
+<div class="file-actions">
+  <input type="file" id="file-upload">
+    <input type="submit" value="Submit">
+  </form>
+</div>
